@@ -17,6 +17,4 @@ A mobile application built with Flutter that allows users to browse, search, and
 * `services/anime_sync_service.dart`: Coordinates data synchronization by preloading cached local data or fetching fresh updates from the API when needed.
 * `screens/home_screen.dart`: The main dashboard showcasing a list of top anime with full pull-to-refresh capabilities, error feedback, and loading states.
 * `screens/detail_screen.dart`: Displays extensive information.
-* `screens/search_screen.dart`: Allows users to actively search for any specific anime or manga title dynamically interacting with the remote API.
-* `screens/favorites_screen.dart`: Renders a dedicated list of the user’s bookmarked titles retrieved instantly from the local database, working entirely offline.
 * `main.dart`: The application entry point responsible for initializing local databases.
