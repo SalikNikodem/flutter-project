@@ -1,20 +1,20 @@
 # Anime & Manga Tracker
 
-A mobile application built with Flutter that allows users to browse, search, and track information about anime and manga. The project utilizes the open Jikan API (a REST API linked to MyAnimeList).
+Aplikacja mobilna stworzona w Flutterze, która pozwala przeglądać i śledzić informacje o anime. Projekt korzysta z darmowego Jikan API (powiązanego z serwisem MyAnimeList).
 
-## Features
+## Główne funkcje
 
-*   **Two main screens:** A home screen featuring a list of the most popular titles and a detailed screen for a selected anime/manga.
-*   **REST API Integration:** Fetching trending lists and detailed information (statistics, ratings, descriptions) using the Jikan API.
-*   **Offline Mode:** Integration with a local database to enable browsing previously fetched data without an internet connection.
-*   **State Management:** Handling data loading states (loading spinners/skeletons) and clear error communication for the user (e.g., no network connection).
+* **Dwa ekrany:** Ekran główny z listą popularnych tytułów oraz ekran ze szczegółowymi informacjami o wybranej serii.
+* **Pobieranie danych (API):** Dynamiczne pobieranie trendów, ocen i opisów prosto z internetu.
+* **Tryb offline:** Zapisywanie danych w lokalnej bazie, co pozwala na przeglądanie aplikacji bez dostępu do sieci.
+* **Płynne działanie:** Obsługa stanów ładowania (animacje/szkielety) oraz jasne komunikaty o błędach (np. brak połączenia).
 
-## Project Structure
+## Struktura projektu
 
-* `models/anime.dart`**: Defines the `Anime` data model.
-* `services/anime_api_service.dart`: Manages HTTP requests to the Jikan REST API, fetching both the top trending anime list and specific search queries.
-* `services/anime_local_database.dart`: Handles local persistence using the Hive database to allow offline data access and manage the user's favorite titles.
-* `services/anime_sync_service.dart`: Coordinates data synchronization by preloading cached local data or fetching fresh updates from the API when needed.
-* `screens/home_screen.dart`: The main dashboard showcasing a list of top anime with full pull-to-refresh capabilities, error feedback, and loading states.
-* `screens/detail_screen.dart`: Displays extensive information.
-* `main.dart`: The application entry point responsible for initializing local databases.
+* `models/` – modele danych (struktura obiektów anime).
+* `services/`
+  * `anime_api_service.dart` – obsługa zapytań do API.
+  * `anime_local_database.dart` – zapisywanie ulubionych i danych offline (baza Hive).
+  * `anime_sync_service.dart` – synchronizacja danych między siecią a pamięcią telefonu.
+* `screens/` – widoki aplikacji (ekran główny z odświeżaniem oraz ekran szczegółów).
+* `main.dart` – punkt startowy aplikacji i konfiguracja bazy danych.
